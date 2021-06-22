@@ -1,0 +1,19 @@
+{
+  "name": "release-upload-sandbox",
+  "version": "1.0.0",
+  "description": "Sandbox for testing out build output upload into a GitHub release",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yury-m/releaseUploadSandbox.git"
+  },
+  "author": "Yury Mikheev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yury-m/releaseUploadSandbox/issues"
+  },
+  "homepage": "https://github.com/yury-m/releaseUploadSandbox#readme"
+}
