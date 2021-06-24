@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '14'
-          
+
       - name: Install dependencies
         working-directory: ./sample-app
         run: npm install
@@ -24,7 +24,7 @@ jobs:
         run: npm run dist dist.prod.zip
 
       - name: Update build output to Release
-        uses: Shopify/upload-to-release@v1
+        uses: Shopify/upload-to-release@v1.0.1
         with:
           name: sample-app.production
           path: sample-app/dist/dist.prod.zip
