@@ -1,0 +1,15 @@
+name: bump-and-tag-build-version
+on:
+  push:
+    target:
+      - master
+jobs:
+  bump-and-tag-build-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - name: Bump build number
+        run: npm version patch
+      - name: Push tags
+        runs: git push --tags
