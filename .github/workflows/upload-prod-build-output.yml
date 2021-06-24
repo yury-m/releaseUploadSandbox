@@ -17,3 +17,14 @@ jobs:
       - name: build production output
         working-directory: ./sample-app
         run: npm run build
+      - name: Run dist command
+        run: npm run dist dist.prod.zip
+
+      - uses: Shopify/upload-to-release@v1
+        name: Update build output to Release
+        working-directory: ./sample-app
+        with:
+          name: sample-app.production
+          path: dist/dist.prod.zip
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          content-type: application/zip
