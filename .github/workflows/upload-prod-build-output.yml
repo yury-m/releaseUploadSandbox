@@ -21,6 +21,7 @@ jobs:
         run: npm run build
 
       - name: Run dist command
+        working-directory: ./sample-app
         run: npm run dist dist.prod.zip
 
       - name: Update build output to Release
