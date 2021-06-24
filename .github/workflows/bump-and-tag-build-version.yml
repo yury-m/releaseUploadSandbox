@@ -12,4 +12,4 @@ jobs:
       - name: Bump build number
         run: npm version patch
       - name: Push tags
-        runs: git push --tags
+        run: git push --tags
