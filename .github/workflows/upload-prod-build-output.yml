@@ -27,7 +27,7 @@ jobs:
       - name: Upload build output to Release
         uses: Shopify/upload-to-release@v1.0.1
         with:
-          name: sample-app.production
+          name: sample-app.production.zip
           path: sample-app/dist/dist.zip
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           content-type: application/zip
