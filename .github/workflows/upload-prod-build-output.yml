@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: '14'
       - name: Navigate to app directory
-        run: pushd sample-app
+        run: cd sample-app/
       - name: Install dependencies
         run: npm install
       - name: build production output
