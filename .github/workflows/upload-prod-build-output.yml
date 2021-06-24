@@ -22,12 +22,12 @@ jobs:
 
       - name: Run dist command
         working-directory: ./sample-app
-        run: npm run dist dist.prod.zip
+        run: npm run dist
 
-      - name: Update build output to Release
+      - name: Upload build output to Release
         uses: Shopify/upload-to-release@v1.0.1
         with:
           name: sample-app.production
-          path: sample-app/dist/dist.prod.zip
+          path: sample-app/dist/dist.zip
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           content-type: application/zip
