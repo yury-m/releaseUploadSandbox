@@ -1,0 +1,19 @@
+name: upload-prod-build-output
+on:
+  release: 
+    types:
+      - created
+jobs:
+  build-and-upload-output-to-release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      - name: Navigate to app directory
+        run: pushd sample-app
+      - name: Install dependencies
+        run: npm install
+      - name: build production output
+        run: npm run build
