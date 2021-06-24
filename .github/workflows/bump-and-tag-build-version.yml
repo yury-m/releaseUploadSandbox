@@ -15,5 +15,7 @@ jobs:
           git config user.email github-actions@verishop.com
       - name: Bump build number
         run: npm version patch
+      - name: Push package.json version update
+        run: git push -f
       - name: Push tags
         run: git push --tags
