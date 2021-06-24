@@ -11,9 +11,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '14'
-      - name: Navigate to app directory
-        run: cd sample-app/
       - name: Install dependencies
+        working-directory: ./sample-app
         run: npm install
       - name: build production output
+        working-directory: ./sample-app
         run: npm run build
