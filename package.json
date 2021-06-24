@@ -1,6 +1,6 @@
 {
   "name": "release-upload-sandbox",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Sandbox for testing out build output upload into a GitHub release",
   "main": "index.js",
   "scripts": {
